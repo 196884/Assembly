@@ -1,0 +1,35 @@
+Simple assembly sources to learn about assembly programming.
+
+Tested on MacOSX (see the Makefile)
+
+The code can be debugged via LLDB to get a better understanding.
+
+LLDB cheat sheet:
+
+lldb <executable>
+# To set a breakpoint at the very start:
+(lldb) breakpoint set --name main
+
+# To launch the program:
+(lldb) run
+
+# To step:
+(lldb) step
+or
+(lldb) s
+(then pressing enter will continue stepping)
+
+# To display the contents of the registers
+(lldb) register read
+
+# To inspect memory at a given address:
+(lldb) memory read 0x...
+to check what options are available:
+(lldb) help memory read
+in particular:
+(lldb) memory read 0x... -c <nb of bytes to show> -l <nb of bytes per line>
+the address can also be expressed relative to a pointer content:
+(lldb) memory read $rsp
+or with an offset:
+(lldb) memory read $rsp+0x8
+
