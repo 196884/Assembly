@@ -15,3 +15,9 @@ factorial_rec_03: factorial_rec_03.o
 
 factorial_rec_03.o: factorial_rec_03.s
 	as factorial_rec_03.s -o factorial_rec_03.o
+
+factorial_imp_04: factorial_imp_04.o
+	ld factorial_imp_04.o -lc -e _main -o factorial_imp_04
+
+factorial_imp_04.o: factorial_imp_04.s
+	as factorial_imp_04.s -o factorial_imp_04.o
