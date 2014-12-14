@@ -10,3 +10,8 @@ fn_call_02: fn_call_02.o
 fn_call_02.o: fn_call_02.s
 	as fn_call_02.s -o fn_call_02.o
 
+factorial_rec_03: factorial_rec_03.o
+	ld factorial_rec_03.o -lc -e _main -o factorial_rec_03
+
+factorial_rec_03.o: factorial_rec_03.s
+	as factorial_rec_03.s -o factorial_rec_03.o
